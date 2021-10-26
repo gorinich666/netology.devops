@@ -1,9 +1,9 @@
 # netology.devops
 
 Будут исключены из комита
-	* Папка .terraform и все папки внутри нее
-	* файлы с расширением .tfstate и с расширением .tfstate.(что-либо еще)
-	* файлы crash.log
-	* файлы с расширением .tfvars
-	* файлы override.tf override.tf.json *_override.tf *_override.tf.json
-	* файлы .terraformrc terraform.rc
+	1. Папка .terraform и все папки внутри нее
+	2. Файлы с расширением .tfstate и с расширением .tfstate.(что-либо еще)
+	3. Файлы crash.log
+	4. Файлы с расширением .tfvars
+	5. Файлы override.tf override.tf.json *_override.tf *_override.tf.json
+	6. Файлы .terraformrc terraform.rc
