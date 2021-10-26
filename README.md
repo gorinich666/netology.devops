@@ -1,17 +1,9 @@
 # netology.devops
-# This is an <h1> tag
-## This is an <h2> tag
-###### This is an <h6> tag
 
-*This text will be italic*
-_This will also be italic_
-
-**This text will be bold**
-__This will also be bold__
-
-_You **can** combine them_
-
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
+Будут исключены из комита:
+	* папка .terraform и все папки внутри нее
+	* файлы с расширением .tfstate и с расширением .tfstate.(что-либо еще)
+	* файлы crash.log
+	* файлы с расширением .tfvars
+	* файлы override.tf override.tf.json *_override.tf *_override.tf.json
+	* файлы .terraformrc terraform.rc
