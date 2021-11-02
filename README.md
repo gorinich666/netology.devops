@@ -7,3 +7,4 @@
 	* файлы с расширением .tfvars
 	* файлы override.tf override.tf.json *_override.tf *_override.tf.json
 	* файлы .terraformrc terraform.rc
+Потренировался делать коммиты через IDE. Удобно.
