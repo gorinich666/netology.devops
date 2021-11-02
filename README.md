@@ -6,4 +6,4 @@
 	* файлы crash.log
 	* файлы с расширением .tfvars
 	* файлы override.tf override.tf.json *_override.tf *_override.tf.json
-	* файлы .terraformrc terraform.rcanother new line
+	* файлы .terraformrc terraform.rc
