@@ -2,8 +2,7 @@
 # display command line options
 
 count=1
-for param in "$@"; do
-	echo "\$@ Parametr #$count = $param"
+	echo "Parametr: $param"
 	count=$(( $count + 1 ))
 done
 
