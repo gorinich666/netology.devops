@@ -1,2 +1,46 @@
-1.  cd is a shell builtin. Во-первых встроенная команда быстрее запускается нежели внешняя команда. Во-вторых внешняя команда не сможет изменить текущия каталог в shell.
-2.  
+1.  cd is a shell builtin. Встроенная команда быстрее запускается нежели внешняя команда.
+2.  cat newFile.txt
+    New line for testing grep and pipe
+    grep 'pipe' newFile.txt | wc -l
+    1
+    grep -c 'pipe' newFile.txt
+    1
+3.  pstree -p
+    systemd(1)─┬─VBoxService(697)─┬─{VBoxService}(699)
+           │                  ├─{VBoxService}(700)
+           │                  ├─{VBoxService}(701)
+           │                  ├─{VBoxService}(702)
+           │                  ├─{VBoxService}(703)
+           │                  ├─{VBoxService}(704)
+           │                  ├─{VBoxService}(705)
+           │                  └─{VBoxService}(706)
+           ├─accounts-daemon(591)─┬─{accounts-daemon}(632)
+           │                      └─{accounts-daemon}(659)
+           ├─agetty(640)
+           ├─agetty(647)
+           ├─apache2(707)─┬─apache2(757)
+           │              ├─apache2(758)
+           │              ├─apache2(759)
+           │              ├─apache2(760)
+           │              └─apache2(761)
+    процесс systemd
+4.  vagrant@ubuntu-focal:~$ ls
+    MyScripts  a  b  c  latest-ru_RU.tar.gz  less  newFile.txt  tar.gz
+    ls newFolder 2> /dev/pts/0
+    ls: cannot access 'newFolder': No such file or directory - сообщение в терминале другой сессии
+5.  cat newFile.txt
+    New line for testing grep and pipe
+    cat newFile.txt > newFile3.txt
+    cat newFile3.txt
+    New line for testing grep and pipe
+6.  Получится, можно перенаправить поток анадогично педыдущему заданию, только для вывода использовать /dev/ttyX
+    предварительно посмотреть номер tty при помощи команды tty. И переключиться в соответствующий tty при помощи Ctrl + Alt + F2 (в моем случае)
+7.  Первой командой будет создан файловый дескриптор 5 и в него будет перенаправлен stdout. Затем будет перенаправлен вывод команды echo в дескриптор 5, на экране увидим netology
+8.  Получится, создаем промежуточный дескриптор bash 6>&2, затем выполним команду, которая завершится с ошибкой ls newFolder 6>&2 2>&1 1>&6 | grep cannot -c
+9.  Данная команда выведет переменные окружения, тоже что и команда env
+10. /proc/[pid]/cmdline - доступный только для чтения файл, содержит полный путь до команды (строка 171)
+    /proc/[pid]/exe - это символическая ссылка, которая содержит фактический путь для исполняемой команды запущенного процесса (строка 211)
+11. cat /proc/cpuinfo SSE 4_2
+12.  
+13. 
+14.
